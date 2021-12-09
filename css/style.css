@@ -1,0 +1,132 @@
+*{
+    
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.wapper{
+    border: 1px solid #000;
+    height: auto;
+    width: 90%;
+    margin: 0 auto;
+}
+.header{
+    background-image: url(../images/banner.jpg);
+    border: 1px solid #000;
+    height: 172px;
+    width: 100%;
+}
+.menu{
+    border: 1px solid #000;
+    height: 50px;
+    width: 100%;
+    background: royalblue;
+}
+ul.list_menu{
+    padding: 0;
+    margin: 0;
+    width: 60%;
+    border: 1px solid;
+    margin: 0 auto;
+    list-style: none;
+    line-height: 27px;
+}
+ul.list_menu li:hover {
+    background: magenta;
+}
+ul.list_menu li a{
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+}
+ul.list_menu li {
+    float: left;
+    margin: 7px;
+    padding: 5px;
+}
+
+#main{
+    border: 1px solid rgb(161, 228, 54);
+    height: auto;
+    width: 100%; 
+}
+.sidebar{
+    border: 1px solid rgb(192, 230, 131);
+    height: 390px;
+    width: 20%;
+    margin-top: 5px;
+    margin-left: 5px;
+    float: left;
+}
+ul.list_sidebar{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    list-style: none;
+    line-height: 27px;
+}
+ul.list_sidebar li:hover {
+    background: magenta;
+}
+ul.list_sidebar li a{
+    text-align: left;
+    text-decoration: none;
+    color: #000;
+    display: block;
+}
+ul.list_sidebar li {
+    margin: 7px;
+    padding: 5px;
+}
+.maincontent{
+    border: 1px solid rgb(255, 27, 46);
+    background: magenta;
+    height: auto;
+    width: 78%;
+    margin-top: 5px;
+    margin-left: 10px;
+    float: left;
+}
+ul.product_list{
+    padding: 0px;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+}
+ul.product_list li {
+    width: 19%;
+    border: 1px dashed #000;
+    margin: 5px;
+    float: left;
+    background: aliceblue;
+    height: 260px;
+}
+ul.product_list li a{
+    text-decoration: none;
+}
+ul.product_list li img{
+    width: 100%;
+}
+p.price_product{
+    text-align: center;
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+}
+p.title_product{
+    text-align: center;
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.clear{
+    clear:both;
+}
+.footer{
+    border: 1px solid #000;
+    height:  150px;
+    width: 100%;
+    background: seagreen;
+}
