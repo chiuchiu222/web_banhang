@@ -1,9 +1,8 @@
-*{
-    
-}
+
 body{
     margin: 0;
     padding: 0;
+    background-color: wheat;
 }
 .wapper{
     border: 1px solid #000;
@@ -102,6 +101,10 @@ ul.product_list li {
     background: aliceblue;
     height: 260px;
 }
+ul.product_list li img{
+    height: 150px;
+}
+
 ul.product_list li a{
     text-decoration: none;
 }

@@ -19,6 +19,10 @@
                 include("../admincp/modules/quanlisp/lietke.php");
             }elseif($tmp=='quanlysanpham'&&$query=='sua'){
                 include("../admincp/modules/quanlisp/sua.php");
+            }elseif($tmp=='quanlydonhang'&&$query=='lietke'){
+                include("../admincp/modules/quanlidonhang/lietke.php");
+            }elseif($tmp=='donhang'&&$query=='xemdonhang'){
+                include("../admincp/modules/quanlidonhang/xemdon.php");
             }else{
                     include("../admincp/modules/dashbroad.php");
                 }

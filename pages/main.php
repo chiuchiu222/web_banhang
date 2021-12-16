@@ -17,8 +17,18 @@
                     include("pages/main/giohang.php");
                 }elseif($tmp=='tintuc'){
                     include("pages/main/tintuc.php");
+                }elseif($tmp=='sanpham'){
+                    include("pages/main/sanpham.php");
                 }elseif($tmp=='lienhe'){
                     include("pages/main/lienhe.php");
+                }elseif($tmp=='dangky'){
+                    include("pages/main/dangky.php");
+                }elseif($tmp=='dangnhap'){
+                    include("pages/main/dangnhap.php");
+                }elseif($tmp=='thanhtoan'){
+                    include("pages/main/thanhtoan.php");
+                }elseif($tmp=='dathangthanhcong'){
+                    include("pages/main/dathangthanhcong.php");
                 }else{
                     include("pages/main/index.php");
                 }
