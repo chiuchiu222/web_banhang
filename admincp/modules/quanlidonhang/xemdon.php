@@ -1,4 +1,4 @@
-<p>Xem đơn hàng</p>
+<h4 class="title py-3">Xem đơn hàng</h4>
 <?php
 $code=$_GET['code'];
 $sql= "SELECT * FROM tbl_cart_details, tbl_sanpham 
@@ -7,7 +7,6 @@ AND tbl_cart_details.code_cart='".$code."'
 ORDER BY tbl_cart_details.id_cart_details DESC";
 $query_lietke_donhang= mysqli_query($mysqli,$sql);
 ?>
-<p>Liệt kê danh mục sản phẩm</p>
 <table style="width:100%" border="1" style="border-collapse:collapse">
   <tr>
       <th>ID</th>
@@ -36,6 +35,6 @@ while($row=mysqli_fetch_array($query_lietke_donhang)){
 }
 ?>
     <tr>
-        <td colspan="6">  <p>Tổng tiền: <?php echo $tongtien; ?></p></td>
+        <td colspan="6">  <p class="btn btn-secondary btn-sm" style=" font-size: 15px; margin: 20px 20px 20px 20px">Tổng tiền: <?php echo $tongtien; ?></p></td>
     </tr>
 </table>

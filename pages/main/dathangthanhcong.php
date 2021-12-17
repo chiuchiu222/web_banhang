@@ -1,1 +1,1 @@
-<p>Đã đặt hàng thành công!</p>
+<p style=" font-weight: 500; font-size:20px; color: green; margin: 20px 20px 20px 20px;">Đã đặt hàng thành công!</p>

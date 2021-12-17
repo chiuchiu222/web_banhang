@@ -1,17 +1,20 @@
-<p>Thêm danh mục sản phẩm</p>
-<table border="1px" width="50%" style="border-collapse: collapse;">
-<form method="POST" action="modules\quanlidanhmucsp\xuly.php">
-  <tr>
-      <td>Tên danh mục</td>
-      <td><input type="text" name="tendanhmuc" ></td>
-  </tr>
-  <tr>
-    <td>Thứ tự</td>
-    <td><input type="text" name="thutu" ></td>
-  </tr>
-<tr>
-<td colspan="2"><input type="submit" name="themdanhmuc" value="Thêm danh mục sản phẩm"></td>
-
-</tr>
-</form>
-</table>
+<h4 class="title py-3">Thêm danh mục sản phẩm</h4>
+<div class="card card-body">
+  <table>
+    <form  method="POST" action="modules\quanlidanhmucsp\xuly.php">
+        <div class="card-body">
+          <div class="form-group">
+            <label>Tên danh mục</label>
+            <input class="form-control" type="text" name="tendanhmuc" >
+          </div>
+          <div class="form-group">
+            <label>Thứ tự</label>
+            <input class="form-control" type="text" name="thutu" >
+          </div>
+          <div class="form-group">
+          <button name="themdanhmuc" type="submit" class="btn btn-primary btn-block">Thêm danh mục</button>
+          </div>
+      </div>
+    </form>
+  </table>
+</div>

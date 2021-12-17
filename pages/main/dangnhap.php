@@ -12,26 +12,30 @@ if(isset($_POST['dangnhap'])){
 
         header("Location:index.php?quanly=giohang");
     }else {
-        echo '<p>Sai Mật khẩu hoặc Tài khoản!</p>';
+        echo '<p style="font-size: 20px; color:red" >Sai Mật khẩu hoặc Tài khoản!</p>';
     }
 }
 ?>
-
-<form action="" autocomplete="off" method="POST">
-    <table>
-        <tr>
-            <td colspan="2"><h3>Đăng nhập Admin</h3></td>   
-        </tr>
-        <tr>
-            <td>Tài khoản</td>
-            <td><input type="text" placeholder="email" name="email"></td>
-        </tr>
-        <tr>
-            <td>Mật khẩu</td>
-            <td><input type="password" name="password"></td>
-        </tr>
-        <tr >
-            <td colspan="2"><input type="submit" name="dangnhap" value="Đăng nhập"></td>
-        </tr>
-    </table>
-    </form>
+<div class="card mx-auto" style="max-width: 380px; margin-top:100px;">
+<div class="card mb-4">
+    <div class="card-body">
+      <h4 class="card-title mb-4">Đăng nhập</h4>
+      <form method="POST">
+          <div class="form-group">
+             <label>Email</label>
+             <input name="email" class="form-control" placeholder="ex. name@gmail.com" type="email">
+          </div> <!-- form-group// -->
+          <div class="form-group">
+            <label>Mật khẩu</label>
+            <input name="password" class="form-control" placeholder="******" type="password">
+          </div> <!-- form-group// --> 
+          <div class="form-group"> 
+            <label class="custom-control custom-checkbox"> <input type="checkbox" class="custom-control-input" checked=""> <div class="custom-control-label"> Remember </div> </label>
+          </div> <!-- form-group form-check .// -->
+          <div class="form-group">
+              <button name="dangnhap" type="submit" class="btn btn-primary btn-block"> Đăng nhập  </button>
+          </div> <!-- form-group// -->    
+      </form>
+    </div>
+</div>
+</div>

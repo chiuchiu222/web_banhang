@@ -5,25 +5,44 @@
     unset($_SESSION['dangky']);
   }
 ?> 
-<div class="menu">
-            <ul class=list_menu>
-                <li><a href="index.php">Trang chủ</a></li>
-                
-                <?php  while ($row_danhmuc= mysqli_fetch_array($query_danhmuc)) { ?>
-                <li><a href="index.php?quanly=danhmucsanpham&id=<?php echo $row_danhmuc['id_danhmuc']?>"><?php echo $row_danhmuc['tendanhmuc']?></a></li>
-                <?php } ?>
-                <li><a href="index.php?quanly=giohang">Giỏ hàng</a></li>
-                <li><a href="index.php?quanly=lienhe">Liên hệ</a></li>
-                <?php
+<nav class="navbar navbar-main navbar-expand-lg border-bottom">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav" aria-controls="main_nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div style="font-weight: 600;" class="collapse navbar-collapse" id="main_nav">
+      <ul class="navbar-nav">
+      	<li class="nav-item">
+        <li><a class="nav-link" href="index.php">Trang chủ</a></li>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"> <i class="fa fa-bars text-muted mr-2"></i> Danh mục </a>
+          <div class="dropdown-menu">
+            <!-- <a class="dropdown-item" href="#">Machinery</a> -->
+            <?php  while ($row_danhmuc= mysqli_fetch_array($query_danhmuc)) { ?>
+             <a class="dropdown-item" href="index.php?quanly=danhmucsanpham&id=<?php echo $row_danhmuc['id_danhmuc']?>"><?php echo $row_danhmuc['tendanhmuc']?></a><?php } ?>
+          </div>
+        </li>
+        <li class="nav-item">
+        <li><a  class="nav-link" href="index.php?quanly=giohang">Giỏ hàng</a></li>
+        </li>
+ 
+        <li class="nav-item">
+        <?php
                 if(isset($_SESSION['dangky'])){
                 ?>
-                  <li><a href="index.php?dangxuat=1">Đăng xuất</a></li>
+                  <li class="nav-item"><a class="nav-link" href="index.php?dangxuat=1">Đăng xuất</a></li>
                 <?php
                 }else{
                 ?>
-                  <li><a href="index.php?quanly=dangky">Đăng ký</a></li>
+                  <li class="nav-item"><a class="nav-link" href="index.php?quanly=dangky">Đăng ký</a></li>
                 <?php
                 }
                 ?>
-            </ul>
-</div>
+                </li>
+      </ul>
+    </div> <!-- collapse .// -->
+  </div> <!-- container .// -->
+</nav>
+

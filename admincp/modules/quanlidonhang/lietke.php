@@ -2,8 +2,9 @@
 $sql= "SELECT * FROM tbl_giohang, tbl_dangky WHERE tbl_giohang.id_khachhang=tbl_dangky.id_dangky ORDER BY tbl_giohang.id_cart DESC";
 $query_lietke_donhang= mysqli_query($mysqli,$sql);
 ?>
-<p>Liệt kê danh mục sản phẩm</p>
+<h4 class="title py-3">Danh sách đơn hàng</h4>
 <table style="width:100%" border="1" style="border-collapse:collapse">
+<thead class="text-muted">
   <tr>
       <th>ID</th>
     <th>Mã đơn hàng</th>
@@ -12,6 +13,7 @@ $query_lietke_donhang= mysqli_query($mysqli,$sql);
     <th>Email</th>
     <th>Số điện thoại</th>
   </tr>
+</thead>
 <?php
 $i=0;
 while($row=mysqli_fetch_array($query_lietke_donhang)){
@@ -25,7 +27,7 @@ while($row=mysqli_fetch_array($query_lietke_donhang)){
       <td><?php echo $row['dienthoai']?></td>
 
       <td>
-          <a href="index.php?action=donhang&query=xemdonhang&code=<?php  echo $row['code_cart']?>">Xem đơn hàng</a>
+          <a class="btn btn-light btn-round"  href="index.php?action=donhang&query=xemdonhang&code=<?php  echo $row['code_cart']?>">Xem đơn hàng</a>
       </td>
   </tr>
   <?php

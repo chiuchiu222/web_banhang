@@ -8,19 +8,25 @@ $query_product=mysqli_query($mysqli,$sql_pro);
 $title_pro= mysqli_fetch_array($query_pro);
 ?>
 
-<h3>Danh mục <?php echo $title_pro['tendanhmuc']?></h3>
-<ul class="product_list">
-<?php
-while ($row_pro=mysqli_fetch_array($query_product)) {?>
-<li>
-  <a href="index.php?quanly=sanpham&id=<?php echo $row_pro['id_sanpham']?>">
-  <img src="admincp/modules/quanlisp/uploads/<?php echo $row_pro['hinhanh']?>">
-  <p class="title_product">Tên sản phẩm: <?php echo $row_pro['tensanpham']?></p>
-  <p class="price_product">Giá: <?php echo number_format($row_pro['giasp']).'VNĐ'?></p>
-  </a>
-</li>
+
+<section  class="padding-bottom-sm">
+	<header class="section-heading heading-line">
+			<h4 class="title-section text-uppercase">Danh mục <?php echo $title_pro['tendanhmuc']?></h4>
+	</header>
+	<div class="row row-sm">
+	<?php while ($row_pro=mysqli_fetch_array($query_product)) {?>
+		<div class="col-xl-2 col-lg-3 col-md-4 col-6">
+			<div href="index.php?quanly=sanpham&id=<?php echo $row_pro['id_sanpham']?>" class="card card-sm card-product-grid">
+						<a href="index.php?quanly=sanpham&id=<?php echo $row_pro['id_sanpham']?>" class="img-wrap"> <img src="admincp/modules/quanlisp/uploads/<?php echo $row_pro['hinhanh']?>"> </a>
+						<figcaption class="info-wrap">
+							<a href="index.php?quanly=sanpham&id=<?php echo $row_pro['id_sanpham']?>" class="title"><?php echo $row_pro['tensanpham']?></a>
+							<div class="price mt-1"><?php echo number_format($row_pro['giasp']).'VNĐ'?></div>
+							</figcaption>
+			</div>
+		</div>
 <?php
 }
 ?>
-   
-</ul>
+</div> <!-- col.// -->
+
+<!-- =============== SECTION ITEMS .//END =============== -->

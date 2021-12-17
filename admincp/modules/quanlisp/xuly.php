@@ -23,6 +23,7 @@ if(isset($_POST['themsanpham'])){
 }elseif(isset($_POST['suasanpham'])){
     //sua
     if($hinhanh!=''){
+        $tmp=$hinhanh;
         move_uploaded_file($hinhanh_tmp,'uploads/'.$hinhanh);
         $sql_update="UPDATE tbl_sanpham SET tensanpham='".$tensanpham."',masp='".$masp."',giasp='".$giasp."',soluong='".$soluong."',
         tomtat='".$tomtat."',noidung='".$noidung."',tinhtrang='".$tinhtrang."',hinhanh='".$hinhanh."',id_danhmuc='".$danhmuc."' WHERE id_sanpham='$_GET[idsanpham]' ";
