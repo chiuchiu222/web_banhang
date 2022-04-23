@@ -27,7 +27,7 @@ if(isset($_SESSION['cart'])){
   <tr>
     <td><?php echo $i; ?></td>
     <td><?php echo $cart_item['tensanpham']; ?></td>
-    <td><img src="admincp/modules/quanlisp/uploads/<?php echo $cart_item['hinhanh'];?>" alt="" width='150'></td>
+    <td><img class="img-sm" src="admincp/modules/quanlisp/uploads/<?php echo $cart_item['hinhanh'];?>" alt="" width='150'></td>
     <td><?php echo number_format($cart_item['giasp'],0,',','.').' VNĐ'; ?></td>
     <td>
         <a style="text-decoration: none;font-size:17px; font-weight:700; color:cornflowerblue" href="pages/main/themgiohang.php?cong=<?php echo $cart_item['id'] ?>"> + </a>

@@ -27,16 +27,19 @@
         <li class="nav-item">
         <li><a  class="nav-link" href="index.php?quanly=giohang">Giỏ hàng</a></li>
         </li>
- 
+
+        
         <li class="nav-item">
         <?php
                 if(isset($_SESSION['dangky'])){
                 ?>
                   <li class="nav-item"><a class="nav-link" href="index.php?dangxuat=1">Đăng xuất</a></li>
+                  <li class="nav-item"><a class="nav-link" href="index.php?quanly=profile">Thông tin cá nhân</a></li>
                 <?php
                 }else{
                 ?>
                   <li class="nav-item"><a class="nav-link" href="index.php?quanly=dangky">Đăng ký</a></li>
+                  <li><a  class="nav-link" href="redirect-google.php">Đăng nhập bằng Google</a></li>
                 <?php
                 }
                 ?>
